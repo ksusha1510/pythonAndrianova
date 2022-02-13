@@ -1,0 +1,77 @@
+# Задача №1
+
+a = '6'
+b= int (5)
+print (a)
+print (type (a))
+
+print (b)
+print (type (b))
+
+name= input ("name:")
+weight= int (input ("weight:"))
+print (f'name: {name}, weight: {weight}')
+
+# Задача №2
+time= int (input ('Введите время в секундах: '))
+hour= time //3600
+min= time %3600 // 60
+sec= time %3600 % 60
+
+print (f'чч: {hour}, мм: {min}, cc {sec}')
+
+# Задача№3
+# для чисел от 1 до 9
+n= int (input ("Введите число: "))
+if n<9:
+    sum= n+ n*11 + n*111
+    print (sum)
+else:
+    print ('Введите число от 1 до 9')
+
+# для всех чисел
+n= input ("Введите число: ")
+n2= int (n*2)
+n3= int (n*3)
+n1= int (n)
+sum=n1+n2+n3
+print (sum)
+
+
+# # Задача №4
+n= int (input ("Введите целое положительное число: "))
+max= int (0)
+while n>0:
+    a=n%10
+    if a>max:
+        max=a
+    n=n//10
+print ("Самая большая цифра в числе:", max)
+
+# Задача №5-6
+vir= int (input ("Введите значение выручки: "))
+izd= int (input ("Введите значение издержек"))
+
+if vir>izd:
+    print ('Фирма работает в прибыль')
+    ren= (vir-izd)/ vir *100
+    print ("Рентабельность фирмы составляет:", float ('%.2f'% ren), "%")
+    n= int (input ("Введите число сотрудников фирмы: "))
+    n1= (vir-izd)/n
+    print ("Прибыль на 1 сотрудника составляет", n1)
+
+elif vir==izd:
+    print ('Размер выручки равен размеру издержек')
+elif vir<izd:
+    print ('Фирма работает в убыток')
+
+# Задача 7
+a= int (input ("Сколько км пробежал спортсмен в первый день? "))
+b= int (input ("Cколько км должен пробежать спортсмен?"))
+i=1
+while a<b:
+    print (i, 'день:', float ('%.2f'% a), 'км')
+    a=a*1.1  # результат увеличивался на 10% от предыдущего, т.е. оставлял 110%
+    i= i+1
+print (i, 'день:', float ('%.2f'% a), 'км')
+print ("На", i, 'день результат спортсмена составит не менее', b, "км")
